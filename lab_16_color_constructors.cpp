@@ -22,6 +22,9 @@ public:
     //parameters constr
     Color(int r, int g, int b) : red(r), green(g), blue(b){}
 
+    //partial constr
+    Color (int r) : red(r), green(0), blue(0){}
+
     //setters
     void setRed(int r) {red = r; }
     void setGreen(int g) {green =g; }
@@ -38,11 +41,12 @@ public:
 };
 
 int main() {
-    Color black;                //default
-    Color white(255,255,255);   //parameter --white
-    Color red(255,0,0);         //parameter --red
-    Color green(0,255,0);       //parameter --green
-    Color blue (0,0,255);       //parameter --blue
+    Color black;                //default const
+    Color white(255,255,255);   //full const parameter --white
+    Color red(255,0,0);         //full const parameter --red
+    Color green(0,255,0);       //full const parameter --green
+    Color blue (0,0,255);       //full const parameter --blue
+    Color redOnly(128);         //partial const red only
 
     //store
     vector<Color> colors = {black, white, red ,green, blue};
