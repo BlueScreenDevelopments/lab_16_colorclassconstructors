@@ -49,7 +49,7 @@ int main() {
     Color redOnly(128);         //partial const red only
 
     //store
-    vector<Color> colors = {black, white, red ,green, blue};
+    vector<Color> colors = {black, white, red ,green, blue, redOnly};
  
     //printout
     for (const auto& c : colors){
